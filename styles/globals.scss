@@ -74,6 +74,39 @@ button {
   }
 }
 
+.center-options {
+  @media screen and (min-width: 768px) {
+    padding-top: 56px;
+  }
+
+  .arrows {
+    @media screen and (max-width: 575px) {
+      transform: scale(0.9) rotate(90deg);
+    }
+  }
+
+  button {
+    position: relative;
+
+    ul {
+      border-radius: 16px;
+      min-width: 180px;
+      background-color: #fff;
+      padding: 20px 10px;
+      position: absolute;
+      box-shadow: 0 4px 6px $color5;
+      top: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      li {
+        text-align: left;
+        padding: 8px;
+      }
+    }
+  }
+}
+
 .form-1 {
   background: $color7;
   padding: 30px 24px;
@@ -117,7 +150,7 @@ button {
   }
 
   .select-container {
-    background: #fff;
+    // background: #fff;
   }
 
   select {

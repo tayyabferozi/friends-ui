@@ -86,22 +86,22 @@ const Enter: NextPage<{ children: any }> = ({ children }) => {
             <div className="participants">
               <div className="container-fluid">
                 <div className="row gy-3">
-                  <div className="col-6 col-md-3">
+                  <div className="col-6 col-md-4">
                     <img src="/call-3.png" alt="participant" />
                   </div>
-                  <div className="col-6 col-md-3">
+                  <div className="col-6 col-md-4">
                     <img src="/call-3.png" alt="participant" />
                   </div>
-                  <div className="col-6 col-md-3">
+                  <div className="col-6 col-md-4">
                     <img src="/call-3.png" alt="participant" />
                   </div>
-                  <div className="col-6 col-md-3">
+                  <div className="col-6 col-md-4">
                     <img src="/call-3.png" alt="participant" />
                   </div>
-                  <div className="col-6 col-md-3">
+                  <div className="col-6 col-md-4">
                     <img src="/call-3.png" alt="participant" />
                   </div>
-                  <div className="col-6 col-md-3">
+                  <div className="col-6 col-md-4">
                     <img src="/call-3.png" alt="participant" />
                   </div>
                 </div>

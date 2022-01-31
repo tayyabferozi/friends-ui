@@ -10,7 +10,8 @@ import Modal from "../components/Modal";
 const Home: NextPage = () => {
   const [resp, setResp] = useState(false);
   const [modalActive, setModalActive] = useState(false);
-  const [popupActive, setPopupActive] = useState(false);
+  // const [popupActive, setPopupActive] = useState(false);
+  const [settingsActive, setSettingsActive] = useState(false);
 
   const showModal = () => {
     setModalActive(true);
@@ -20,12 +21,16 @@ const Home: NextPage = () => {
     setModalActive(false);
   };
 
-  const togglePopup = () => {
-    setPopupActive((prevState) => !prevState);
-  };
+  // const togglePopup = () => {
+  //   setPopupActive((prevState) => !prevState);
+  // };
 
   const toggleResp = () => {
     setResp((prevState) => !prevState);
+  };
+
+  const toggleSettings = () => {
+    setSettingsActive((prevState) => !prevState);
   };
 
   return (
@@ -141,7 +146,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </Modal>
-        <div className={clsx(styles.popup, { [styles.active]: popupActive })}>
+        {/* <div className={clsx(styles.popup, { [styles.active]: popupActive })}>
           <div className={styles.popupClose} onClick={togglePopup}>
             <img
               className={styles.popupCloseImg}
@@ -163,7 +168,7 @@ const Home: NextPage = () => {
             </div>
             <img className={styles.plus} src="/plus-line.svg" alt="plus" />
           </div>
-        </div>
+        </div> */}
         <div className="page-container">
           <div className={clsx({ [styles.landing]: resp })}>
             <div className="container-fluid">
@@ -176,7 +181,7 @@ const Home: NextPage = () => {
                       <img src="/arrow-btn-left.svg" alt="arrow" />
                     </button>
                     <button
-                      onClick={togglePopup}
+                      // onClick={togglePopup}
                       className={clsx(
                         styles.new,
                         styles.newBtn,
@@ -196,11 +201,19 @@ const Home: NextPage = () => {
                   className="col-sm-1 py-3 py-sm-0 flex-shrink-0"
                   style={{ minWidth: "85px" }}
                 >
-                  <div className="d-flex align-items-center justify-content-center h-100 px-0 px-md-2">
-                    <button className="p-0 mx-1">
+                  <div className="d-flex align-items-center justify-content-center h-100 px-0 px-md-2 center-options">
+                    <button className="p-0 m-1" onClick={toggleSettings}>
                       <Img src="/settings.svg" width={40} height={40} />
+
+                      {settingsActive && (
+                        <ul className="settings-dropdown">
+                          <li>Option 1</li>
+                          <li>Option 2</li>
+                          <li>Option 3</li>
+                        </ul>
+                      )}
                     </button>
-                    <button className="p-0 mx-1">
+                    <button className="p-0 m-1 arrows">
                       <Img
                         src="/arrow-double-right.svg"
                         width={40}
