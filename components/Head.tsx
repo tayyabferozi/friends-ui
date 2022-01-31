@@ -3,7 +3,7 @@ import Img from "next/image";
 import clsx from "clsx";
 import styles from "../styles/Head.module.scss";
 
-const Head: NextPage = () => {
+const Head: NextPage<{ toggleResp: any }> = ({ toggleResp }) => {
   return (
     <header className={styles.header}>
       <div className={styles.nav}>
@@ -17,7 +17,7 @@ const Head: NextPage = () => {
         <h1 className="ms-2">Untitled Project</h1>
       </div>
       <div className={styles.options}>
-        <button className={clsx("shadowed", styles.resp)}>
+        <button className={clsx("shadowed", styles.resp)} onClick={toggleResp}>
           <Img width={12} height={18} src="/mobile.svg" alt="mobile" />
           <span className="ms-3 d-flex align-items-center">
             <Img width={10} height={6} src="/dropdown-arrow.svg" alt="arrow" />

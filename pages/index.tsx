@@ -10,6 +10,7 @@ import Modal from "../components/Modal";
 const Home: NextPage = () => {
   const [resp, setResp] = useState(false);
   const [modalActive, setModalActive] = useState(false);
+  const [popupActive, setPopupActive] = useState(false);
 
   const showModal = () => {
     setModalActive(true);
@@ -19,14 +20,22 @@ const Home: NextPage = () => {
     setModalActive(false);
   };
 
+  const togglePopup = () => {
+    setPopupActive((prevState) => !prevState);
+  };
+
+  const toggleResp = () => {
+    setResp((prevState) => !prevState);
+  };
+
   return (
-    <Layout showModal={showModal}>
-      <div className={clsx(styles.home, "py-4 px-3 px-md-5")}>
+    <Layout toggleResp={toggleResp} showModal={showModal}>
+      <div className={clsx(styles.home, "pt-4 px-3 px-md-5")}>
         <Modal active={modalActive} hideModal={hideModal}>
           <div className="container-fluid">
             <div className="row">
               <div className="col-6 col-sm-4 col-md-3">
-                <div className={styles.cardContainer}>
+                <div className={styles.newCardContainer}>
                   <div className={styles.new}>
                     <div className={styles.img}></div>
                     <div className={styles.title}>New</div>
@@ -39,7 +48,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className={styles.cardContainer}>
+                <div className={styles.newCardContainer}>
                   <div className={styles.new}>
                     <div className={styles.img}></div>
                     <div className={styles.title}>New</div>
@@ -52,7 +61,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className={styles.cardContainer}>
+                <div className={styles.newCardContainer}>
                   <div className={styles.new}>
                     <div className={styles.img}></div>
                     <div className={styles.title}>New</div>
@@ -65,7 +74,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className={styles.cardContainer}>
+                <div className={styles.newCardContainer}>
                   <div className={styles.new}>
                     <div className={styles.img}></div>
                     <div className={styles.title}>New</div>
@@ -78,7 +87,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className={styles.cardContainer}>
+                <div className={styles.newCardContainer}>
                   <div className={styles.new}>
                     <div className={styles.img}></div>
                     <div className={styles.title}>New</div>
@@ -91,7 +100,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className={styles.cardContainer}>
+                <div className={styles.newCardContainer}>
                   <div className={styles.new}>
                     <div className={styles.img}></div>
                     <div className={styles.title}>New</div>
@@ -104,7 +113,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className={styles.cardContainer}>
+                <div className={styles.newCardContainer}>
                   <div className={styles.new}>
                     <div className={styles.img}></div>
                     <div className={styles.title}>New</div>
@@ -117,7 +126,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className={styles.cardContainer}>
+                <div className={styles.newCardContainer}>
                   <div className={styles.new}>
                     <div className={styles.img}></div>
                     <div className={styles.title}>New</div>
@@ -132,8 +141,31 @@ const Home: NextPage = () => {
             </div>
           </div>
         </Modal>
+        <div className={clsx(styles.popup, { [styles.active]: popupActive })}>
+          <div className={styles.popupClose} onClick={togglePopup}>
+            <img
+              className={styles.popupCloseImg}
+              src="/modal-close.svg"
+              alt="modal-close"
+            />
+          </div>
+          <div className={clsx(styles.newCardContainer, "mb-4")}>
+            <div className={styles.new}>
+              <div className={styles.img}></div>
+              <div className={styles.title}>New</div>
+            </div>
+            <img className={styles.plus} src="/plus-line.svg" alt="plus" />
+          </div>
+          <div className={styles.newCardContainer}>
+            <div className={styles.new}>
+              <div className={styles.img}></div>
+              <div className={styles.title}>New</div>
+            </div>
+            <img className={styles.plus} src="/plus-line.svg" alt="plus" />
+          </div>
+        </div>
         <div className="page-container">
-          <div className={styles.landing}>
+          <div className={clsx({ [styles.landing]: resp })}>
             <div className="container-fluid">
               <div className="row gx-md-0">
                 <div className="col-5"></div>
@@ -144,6 +176,7 @@ const Home: NextPage = () => {
                       <img src="/arrow-btn-left.svg" alt="arrow" />
                     </button>
                     <button
+                      onClick={togglePopup}
                       className={clsx(
                         styles.new,
                         styles.newBtn,

@@ -5,13 +5,14 @@ import Head from "../components/Head";
 import styles from "../styles/Layout.module.scss";
 import Options from "../components/Options";
 
-const Layout: NextPage<{ showModal: any; children: any }> = ({
+const Layout: NextPage<{ toggleResp: any; showModal: any; children: any }> = ({
+  toggleResp,
   showModal,
   children,
 }) => {
   return (
     <div className={styles.container}>
-      <Head />
+      <Head toggleResp={toggleResp} />
       <button
         onClick={showModal}
         className={clsx(styles.btnList, "btn-shadowed")}
