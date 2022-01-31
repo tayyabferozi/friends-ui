@@ -39,6 +39,18 @@
 .callOptions {
   button {
     margin: 0 0.5rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 375px) {
+      width: 42px;
+      height: 42px;
+
+      img {
+        transform: scale(0.7);
+      }
+    }
   }
 }
 

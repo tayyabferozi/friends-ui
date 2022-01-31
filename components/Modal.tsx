@@ -7,10 +7,10 @@ const Modal: NextPage<{ children: any; hideModal: any; active: any }> = ({
   hideModal,
   children,
 }) => {
-  console.log(active);
   return (
     <>
       <div
+        onClick={hideModal}
         className={clsx(styles.modalOverlay, { [styles.active]: active })}
       ></div>
       <div className={clsx(styles.modal, { [styles.active]: active })}>
