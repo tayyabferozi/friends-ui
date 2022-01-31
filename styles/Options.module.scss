@@ -94,6 +94,7 @@
     top: calc(50% + 45px);
     transform: translateY(-50%);
     width: 88px;
+    overflow-y: auto;
 
     @media screen and (max-width: 767px) {
       top: calc(50% + 35px);
