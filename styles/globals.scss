@@ -1,0 +1,67 @@
+@import "colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "segoe ui", sans-serif;
+}
+
+main {
+  height: calc(100vh);
+  min-height: 780px;
+  padding-top: 100px;
+
+  @media screen and (max-width: 575px) {
+    height: unset;
+    min-height: unset;
+    padding-bottom: 130px;
+  }
+}
+
+.page-container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+button {
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 7px;
+  padding: 0 16px;
+  height: 50px;
+  cursor: pointer;
+
+  &.shadowed {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  }
+
+  &.btn-primary {
+    height: 40px;
+    background: $color4;
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &.btn-rounded {
+    width: 60px;
+    height: 60px;
+    border-radius: 50% !important;
+  }
+}

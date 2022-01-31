@@ -1,0 +1,46 @@
+.modalOverlay,
+.modal {
+  pointer-events: none;
+  opacity: 0;
+
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+}
+
+.modal {
+  position: relative;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  max-width: 955px;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  padding-top: 46px;
+  overflow-y: auto;
+  max-height: 95vh;
+
+  .modalClose {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    .modalCloseImg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

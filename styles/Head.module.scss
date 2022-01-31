@@ -1,0 +1,52 @@
+@import "colors.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  z-index: 5;
+
+  .nav {
+    display: flex;
+    align-items: center;
+
+    .back {
+      margin-right: 20px;
+    }
+
+    .text {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      margin: 0 8px;
+    }
+
+    .resp {
+    }
+
+    .live {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      background: $color1;
+    }
+
+    .platform {
+      border: 1px solid $color2;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "colors.scss";
+
+.home {
+  background: $color3;
+  height: 100%;
+}
+
+.new {
+  width: 275px;
+  border-radius: 16px !important;
+
+  @media screen and (max-width: 772px) {
+    width: 100px;
+  }
+}
+
+.newBtn {
+  @media screen and (max-width: 991px) {
+    width: 200px;
+    height: 30px !important;
+    font-size: 14px !important;
+    margin: 0 0.75rem;
+  }
+}
+
+.arrowBtn {
+  @media screen and (max-width: 991px) {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.callOptions {
+  button {
+    margin: 0 0.5rem;
+  }
+}
+
+.cardPlaceholder {
+  background: $color2;
+  width: 100%;
+  height: 450px;
+}
+
+.cardContainer {
+  margin-bottom: 50px;
+
+  .new {
+    border-radius: 15px;
+    border: 1px solid $color4;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+
+    .img {
+      width: 100%;
+      height: 150px;
+      background: #000;
+    }
+
+    .title {
+      padding: 10px;
+      font-weight: 600;
+      color: $color4;
+      border-top: 1px solid $color4;
+    }
+  }
+
+  .plus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

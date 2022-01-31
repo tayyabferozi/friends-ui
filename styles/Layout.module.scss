@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  position: relative;
+}
+
+.btnList {
+  position: fixed;
+  border-radius: 50px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  top: 120px;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}

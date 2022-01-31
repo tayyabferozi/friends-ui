@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+	<circle id="Ellipse_19" data-name="Ellipse 19" cx="36" cy="36" r="36" fill="#e1e8f0" />
+	<g id="g578" transform="translate(12 19)">
+		<rect id="rect124" width="48.531" height="34" fill="#006" />
+		<g id="g584">
+			<path id="path146" d="M0,0V3.8L43.1,34h5.426V30.2L5.426,0H0ZM48.531,0V3.8L5.426,34H0V30.2L43.1,0Z" fill="#fff" />
+			<path id="path136" d="M20.221,0V34H28.31V0ZM0,11.333V22.667H48.531V11.333Z" fill="#fff" />
+			<path id="path141" d="M0,13.6v6.8H48.531V13.6ZM21.839,0V34h4.853V0Z" fill="#c00" />
+			<path id="path150" d="M0,34,16.177,22.667h3.617L3.617,34ZM0,0,16.177,11.333H12.56L0,2.534V0ZM28.737,11.333,44.913,0h3.617L32.354,11.333ZM48.531,34,32.354,22.667h3.617l12.56,8.8Z" fill="#c00" />
+		</g>
+	</g>
+</svg>
