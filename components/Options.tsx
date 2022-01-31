@@ -17,7 +17,7 @@ const Options: NextPage = () => {
 
   return (
     <>
-      {dropDownActive && <DropDown />}
+      {!sideNav && dropDownActive && <DropDown />}
       <div className={clsx(styles.options, { [styles.side]: sideNav })}>
         <div className={styles.main}>
           <button
